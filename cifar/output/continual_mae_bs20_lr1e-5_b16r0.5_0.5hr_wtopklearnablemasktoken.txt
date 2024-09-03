@@ -1,0 +1,86 @@
+[24/08/07 11:11:40] [conf.py:  246]: PyTorch Version: torch=1.10.0, cuda=11.3, cudnn=8200
+[24/08/07 11:11:40] [conf.py:  248]: BN:
+  EPS: 1e-05
+  MOM: 0.1
+CKPT_DIR: ./ckpt
+CORRUPTION:
+  DATASET: cifar10
+  NUM_EX: 10000
+  SEVERITY: [5]
+  TYPE: ['gaussian_noise', 'shot_noise', 'impulse_noise', 'defocus_blur', 'glass_blur', 'motion_blur', 'zoom_blur', 'snow', 'frost', 'fog', 'brightness', 'contrast', 'elastic_transform', 'pixelate', 'jpeg_compression']
+CUDNN:
+  BENCHMARK: True
+DATA_DIR: ./data
+DESC: 
+LOG_DEST: continual_mae_240807_111140.txt
+LOG_TIME: 240807_111140
+MODEL:
+  ADAPTATION: Continual_MAE
+  ARCH: Standard_VITB_MAE
+  EPISODIC: False
+OPTIM:
+  AP: 0.92
+  BETA: 0.9
+  DAMPENING: 0.0
+  LR: 1e-05
+  METHOD: Adam
+  MOMENTUM: 0.9
+  MT: 0.999
+  MT_ViDA: 0.999
+  NESTEROV: True
+  RST: 0.01
+  STEPS: 1
+  ViDALR: 0.0001
+  WD: 0.0
+RNG_SEED: 1
+SAVE_DIR: ./output
+TEST:
+  BATCH_SIZE: 20
+  ckpt: None
+  vida_rank1: 1
+  vida_rank2: 128
+block_size: 16
+hog_ratio: 0.5
+mask_ratio: 0.5
+size: 384
+use_hog: True
+[24/08/07 11:11:50] [cifar10c_vit_mae.py:  117]: test-time adaptation: Continual_MAE
+[24/08/07 11:11:51] [cifar10c_vit_mae.py:  275]: params for adaptation: ['module.patch_embed.proj.weight', 'module.patch_embed.proj.bias', 'module.blocks.0.norm1.weight', 'module.blocks.0.norm1.bias', 'module.blocks.0.attn.qkv.weight', 'module.blocks.0.attn.qkv.bias', 'module.blocks.0.attn.proj.weight', 'module.blocks.0.attn.proj.bias', 'module.blocks.0.norm2.weight', 'module.blocks.0.norm2.bias', 'module.blocks.0.mlp.fc1.weight', 'module.blocks.0.mlp.fc1.bias', 'module.blocks.0.mlp.fc2.weight', 'module.blocks.0.mlp.fc2.bias', 'module.blocks.1.norm1.weight', 'module.blocks.1.norm1.bias', 'module.blocks.1.attn.qkv.weight', 'module.blocks.1.attn.qkv.bias', 'module.blocks.1.attn.proj.weight', 'module.blocks.1.attn.proj.bias', 'module.blocks.1.norm2.weight', 'module.blocks.1.norm2.bias', 'module.blocks.1.mlp.fc1.weight', 'module.blocks.1.mlp.fc1.bias', 'module.blocks.1.mlp.fc2.weight', 'module.blocks.1.mlp.fc2.bias', 'module.blocks.2.norm1.weight', 'module.blocks.2.norm1.bias', 'module.blocks.2.attn.qkv.weight', 'module.blocks.2.attn.qkv.bias', 'module.blocks.2.attn.proj.weight', 'module.blocks.2.attn.proj.bias', 'module.blocks.2.norm2.weight', 'module.blocks.2.norm2.bias', 'module.blocks.2.mlp.fc1.weight', 'module.blocks.2.mlp.fc1.bias', 'module.blocks.2.mlp.fc2.weight', 'module.blocks.2.mlp.fc2.bias', 'module.blocks.3.norm1.weight', 'module.blocks.3.norm1.bias', 'module.blocks.3.attn.qkv.weight', 'module.blocks.3.attn.qkv.bias', 'module.blocks.3.attn.proj.weight', 'module.blocks.3.attn.proj.bias', 'module.blocks.3.norm2.weight', 'module.blocks.3.norm2.bias', 'module.blocks.3.mlp.fc1.weight', 'module.blocks.3.mlp.fc1.bias', 'module.blocks.3.mlp.fc2.weight', 'module.blocks.3.mlp.fc2.bias', 'module.blocks.4.norm1.weight', 'module.blocks.4.norm1.bias', 'module.blocks.4.attn.qkv.weight', 'module.blocks.4.attn.qkv.bias', 'module.blocks.4.attn.proj.weight', 'module.blocks.4.attn.proj.bias', 'module.blocks.4.norm2.weight', 'module.blocks.4.norm2.bias', 'module.blocks.4.mlp.fc1.weight', 'module.blocks.4.mlp.fc1.bias', 'module.blocks.4.mlp.fc2.weight', 'module.blocks.4.mlp.fc2.bias', 'module.blocks.5.norm1.weight', 'module.blocks.5.norm1.bias', 'module.blocks.5.attn.qkv.weight', 'module.blocks.5.attn.qkv.bias', 'module.blocks.5.attn.proj.weight', 'module.blocks.5.attn.proj.bias', 'module.blocks.5.norm2.weight', 'module.blocks.5.norm2.bias', 'module.blocks.5.mlp.fc1.weight', 'module.blocks.5.mlp.fc1.bias', 'module.blocks.5.mlp.fc2.weight', 'module.blocks.5.mlp.fc2.bias', 'module.blocks.6.norm1.weight', 'module.blocks.6.norm1.bias', 'module.blocks.6.attn.qkv.weight', 'module.blocks.6.attn.qkv.bias', 'module.blocks.6.attn.proj.weight', 'module.blocks.6.attn.proj.bias', 'module.blocks.6.norm2.weight', 'module.blocks.6.norm2.bias', 'module.blocks.6.mlp.fc1.weight', 'module.blocks.6.mlp.fc1.bias', 'module.blocks.6.mlp.fc2.weight', 'module.blocks.6.mlp.fc2.bias', 'module.blocks.7.norm1.weight', 'module.blocks.7.norm1.bias', 'module.blocks.7.attn.qkv.weight', 'module.blocks.7.attn.qkv.bias', 'module.blocks.7.attn.proj.weight', 'module.blocks.7.attn.proj.bias', 'module.blocks.7.norm2.weight', 'module.blocks.7.norm2.bias', 'module.blocks.7.mlp.fc1.weight', 'module.blocks.7.mlp.fc1.bias', 'module.blocks.7.mlp.fc2.weight', 'module.blocks.7.mlp.fc2.bias', 'module.blocks.8.norm1.weight', 'module.blocks.8.norm1.bias', 'module.blocks.8.attn.qkv.weight', 'module.blocks.8.attn.qkv.bias', 'module.blocks.8.attn.proj.weight', 'module.blocks.8.attn.proj.bias', 'module.blocks.8.norm2.weight', 'module.blocks.8.norm2.bias', 'module.blocks.8.mlp.fc1.weight', 'module.blocks.8.mlp.fc1.bias', 'module.blocks.8.mlp.fc2.weight', 'module.blocks.8.mlp.fc2.bias', 'module.blocks.9.norm1.weight', 'module.blocks.9.norm1.bias', 'module.blocks.9.attn.qkv.weight', 'module.blocks.9.attn.qkv.bias', 'module.blocks.9.attn.proj.weight', 'module.blocks.9.attn.proj.bias', 'module.blocks.9.norm2.weight', 'module.blocks.9.norm2.bias', 'module.blocks.9.mlp.fc1.weight', 'module.blocks.9.mlp.fc1.bias', 'module.blocks.9.mlp.fc2.weight', 'module.blocks.9.mlp.fc2.bias', 'module.blocks.10.norm1.weight', 'module.blocks.10.norm1.bias', 'module.blocks.10.attn.qkv.weight', 'module.blocks.10.attn.qkv.bias', 'module.blocks.10.attn.proj.weight', 'module.blocks.10.attn.proj.bias', 'module.blocks.10.norm2.weight', 'module.blocks.10.norm2.bias', 'module.blocks.10.mlp.fc1.weight', 'module.blocks.10.mlp.fc1.bias', 'module.blocks.10.mlp.fc2.weight', 'module.blocks.10.mlp.fc2.bias', 'module.blocks.11.norm1.weight', 'module.blocks.11.norm1.bias', 'module.blocks.11.attn.qkv.weight', 'module.blocks.11.attn.qkv.bias', 'module.blocks.11.attn.proj.weight', 'module.blocks.11.attn.proj.bias', 'module.blocks.11.norm2.weight', 'module.blocks.11.norm2.bias', 'module.blocks.11.mlp.fc1.weight', 'module.blocks.11.mlp.fc1.bias', 'module.blocks.11.mlp.fc2.weight', 'module.blocks.11.mlp.fc2.bias', 'module.norm.weight', 'module.norm.bias', 'module.head.weight', 'module.head.bias', 'module.weight', 'module.bias', 'module']
+[24/08/07 11:11:51] [cifar10c_vit_mae.py:  276]: optimizer for adaptation: Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    lr: 1e-05
+    weight_decay: 0.0
+)
+[24/08/07 11:11:51] [cifar10c_vit_mae.py:  126]: resetting model
+[24/08/07 12:12:41] [cifar10c_vit_mae.py:  139]: error % [gaussian_noise5]: 31.02%
+[24/08/07 12:12:41] [cifar10c_vit_mae.py:  130]: not resetting model
+[24/08/07 13:36:35] [cifar10c_vit_mae.py:  139]: error % [shot_noise5]: 19.08%
+[24/08/07 13:36:35] [cifar10c_vit_mae.py:  130]: not resetting model
+[24/08/07 14:46:18] [cifar10c_vit_mae.py:  139]: error % [impulse_noise5]: 10.83%
+[24/08/07 14:46:18] [cifar10c_vit_mae.py:  130]: not resetting model
+[24/08/07 15:54:51] [cifar10c_vit_mae.py:  139]: error % [defocus_blur5]: 11.32%
+[24/08/07 15:54:51] [cifar10c_vit_mae.py:  130]: not resetting model
+[24/08/07 16:57:18] [cifar10c_vit_mae.py:  139]: error % [glass_blur5]: 21.30%
+[24/08/07 16:57:18] [cifar10c_vit_mae.py:  130]: not resetting model
+[24/08/07 17:58:21] [cifar10c_vit_mae.py:  139]: error % [motion_blur5]: 14.20%
+[24/08/07 17:58:21] [cifar10c_vit_mae.py:  130]: not resetting model
+[24/08/07 19:01:13] [cifar10c_vit_mae.py:  139]: error % [zoom_blur5]: 9.54%
+[24/08/07 19:01:13] [cifar10c_vit_mae.py:  130]: not resetting model
+[24/08/07 20:15:12] [cifar10c_vit_mae.py:  139]: error % [snow5]: 6.60%
+[24/08/07 20:15:12] [cifar10c_vit_mae.py:  130]: not resetting model
+[24/08/07 21:11:22] [cifar10c_vit_mae.py:  139]: error % [frost5]: 6.50%
+[24/08/07 21:11:22] [cifar10c_vit_mae.py:  130]: not resetting model
+[24/08/07 22:05:40] [cifar10c_vit_mae.py:  139]: error % [fog5]: 8.64%
+[24/08/07 22:05:40] [cifar10c_vit_mae.py:  130]: not resetting model
+[24/08/07 22:59:11] [cifar10c_vit_mae.py:  139]: error % [brightness5]: 3.92%
+[24/08/07 22:59:11] [cifar10c_vit_mae.py:  130]: not resetting model
+[24/08/07 23:52:25] [cifar10c_vit_mae.py:  139]: error % [contrast5]: 8.88%
+[24/08/07 23:52:25] [cifar10c_vit_mae.py:  130]: not resetting model
+[24/08/08 00:56:09] [cifar10c_vit_mae.py:  139]: error % [elastic_transform5]: 13.49%
+[24/08/08 00:56:09] [cifar10c_vit_mae.py:  130]: not resetting model
+[24/08/08 02:01:22] [cifar10c_vit_mae.py:  139]: error % [pixelate5]: 9.12%
+[24/08/08 02:01:22] [cifar10c_vit_mae.py:  130]: not resetting model
+[24/08/08 03:06:13] [cifar10c_vit_mae.py:  139]: error % [jpeg_compression5]: 14.69%
