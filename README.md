@@ -29,7 +29,7 @@ cd cifar
 bash ./bash/cifar10/source_vit.sh # Source model directly test on target domain
 bash ./bash/cifar10/tent_vit.sh # Tent 
 bash ./bash/cifar10/cotta_vit.sh # CoTTA
-bash ./bash/cifar10/vida_vit.sh # ViDA
+bash ./bash/cifar10/continual_mae_vit.sh # Continual-mae
 ```
 
 ## Citation
