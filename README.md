@@ -3,7 +3,7 @@
 
 Jiaming Liu*, Ran Xu*, Senqiao Yang, Renrui Zhang, Qizhe Zhang, Zehui Chen, Yandong Guo, Shanghang Zhang
 
-<img src="figure/continual-ame.png"/>
+<img src="figure/continual-mae.png"/>
 
 ## Overview
 
